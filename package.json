@@ -25,6 +25,7 @@
         "vue": "^3.4.3"
     },
     "dependencies": {
-        "@inertiajs/vue3": "^1.0.14"
+        "@inertiajs/vue3": "^1.0.14",
+        "lodash": "^4.17.21"
     }
 }
