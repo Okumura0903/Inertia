@@ -44,6 +44,13 @@ class Listing extends Model
         return $query->orderByDesc('created_at');
     }
 
+    public function scopeWithoutSold(Builder $query):Builder{
+        // return $query->whereDoesntHave('offers', function (Builder $query) {
+        //         $query->where('accepted_at', '!=', null)->orWhere('rejected_at', '!=', null);
+        //     });
+            return $query->whereNull('sold_at');
+    }
+
     public function scopeFilter(Builder $query,array $filters):Builder{
         return $query
             ->when(
